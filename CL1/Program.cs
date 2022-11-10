@@ -53,18 +53,7 @@ namespace CL1
 
     }
 
-    class Department 
-    {
-        public string department;
-        public Person[] Persons;
-
-
-        
-    }
-
-   
-
-    class Person 
+    public class Person 
     {
         public string namePerson;
         public int age;
