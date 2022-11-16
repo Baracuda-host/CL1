@@ -22,5 +22,9 @@ namespace CL1
             namePerson = name;
             this.age = age;
         }
+
+       
     }
+
+
 }
