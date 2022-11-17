@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace CL1
 {
-    public class Department
+    public class Person
     {
         public string Name { get; set; }
-        public List<Person> Persons { get; set; }
-        public Department()
+        public int Age { set; get; }
+
+        public Person()
         {
-            Name = "";
+            Name = "X";
+            Age = 0;
         }
-        public Department(string nameDepart)
+
+        public Person(string name, int age)
         {
-            Name = nameDepart;
+            Name = name;
+            Age = age;
         }
     }
 }
