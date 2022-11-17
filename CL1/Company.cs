@@ -8,37 +8,35 @@ namespace CL1
 {
     class Company
     {
-        public string nameCompany;
-
+        public string Name { get; set; }
         public List<Department> Departments { get; set; }
 
         public Company()
         {
-            nameCompany = "None";
+            Name = "None";
         }
-
         public Company(string name)
         {
-            nameCompany = name;
+            Name = name;
         }
 
         public void GetInfoCompany()
         {
             Console.WriteLine();
             Console.WriteLine("===============================");
-            Console.WriteLine($"Название фирмы:{nameCompany}:");
+            Console.WriteLine($"Название фирмы:{Name}:");
             Console.WriteLine("===============================");
 
             foreach (var item in Departments)
             {
                 Console.WriteLine();
-                Console.WriteLine($"{item.department}:");
+                Console.WriteLine($"{item.Name}:");
                 Console.WriteLine();
 
                 int count = 1;
                 foreach (var item1 in item.Persons)
                 {
-                    Console.WriteLine($"N{count}  ФИО:   {item1.namePerson}   Возраст: {item1.age}");
+                    Console.WriteLine($"N{count}  ФИО:   {item1.Name}   Возраст: {item1.Age}");
                     count++;
                 }
             }

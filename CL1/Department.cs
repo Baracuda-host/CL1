@@ -8,17 +8,15 @@ namespace CL1
 {
     public class Department
     {
-        public string department;
+        public string Name { get; set; }
         public List<Person> Persons { get; set; }
-
         public Department()
         {
-            department = "";
+            Name = "";
         }
         public Department(string nameDepart)
         {
-            department= nameDepart;
+            Name = nameDepart;
         }
     }
-
 }
