@@ -26,6 +26,7 @@ namespace CL1
 
         public void GetInfoCompany()
         {
+            Console.WriteLine();
             Console.WriteLine("===============================");
             Console.WriteLine($"Название фирмы:{nameCompany}:");
             Console.WriteLine("===============================");
@@ -164,29 +165,9 @@ namespace CL1
             company2.Departments[2].Persons = persons33;
 
             company2.GetInfoCompany();
-                
-
-
-
-
-
+            
 
             #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             Console.ReadLine();
 
