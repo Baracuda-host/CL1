@@ -6,68 +6,14 @@ using System.Threading.Tasks;
 
 namespace CL1
 {
-    class Company 
-    {
-        public string nameCompany;
-
-
-        public List<Department> Departments { get; set; }
-
-
-        public Company()
-        {
-            nameCompany = "None";
-        }
-
-        public Company(string name)
-        {
-            nameCompany = name;
-        }
-
-        public void GetInfoCompany()
-        {
-            Console.WriteLine();
-            Console.WriteLine("===============================");
-            Console.WriteLine($"Название фирмы:{nameCompany}:");
-            Console.WriteLine("===============================");
-            
-            
-
-            foreach (var item in Departments)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"{ item.department}:");
-                Console.WriteLine();
-
-                int count = 1;
-                foreach (var item1 in item.Persons)
-                {
-                    Console.WriteLine($"N{count}  ФИО:   { item1.namePerson}   Возраст: {item1.age}");
-                    
-                    count++;
-                }
-                
-            }
-            
-
-
-        }
-
-    }
-
-   
-
-
+    
     internal class Program
-    {
-        
-
+    {       
         static void Main(string[] args)
         {
             Company company1 = new Company("Aviazavod");                //создали обект класса компани компания1
 
             #region создание отделов
-
 
             List<Department> departments = new List<Department>()               //создали список из 3х отделов 
             {
@@ -75,11 +21,8 @@ namespace CL1
                 new Department("Marketing"),
                 new Department("Otdel Personal"),
 
-
             };
-            
-            
-                       
+                     
             company1.Departments = departments;                       //присваиваем компании1 3 отдела
 
             #endregion
@@ -90,20 +33,16 @@ namespace CL1
                new Person("Серегин И.А.", 38),
                new Person("Ванилин К.А.", 37),
             };
-              
-
+             
             company1.Departments[0].Persons = persons1;
-
 
             List<Person> persons2 = new List<Person>()
             {
                 new Person("Иванов В.А.", 30),
                 new Person("Саратин И.Н.", 35),
                 new Person("Волгин В.А.", 34),
-
             };
-
-            
+                        
             company1.Departments[1].Persons = persons2;
 
             List<Person> persons3 = new List<Person>()
@@ -113,9 +52,8 @@ namespace CL1
                 new Person("Игнатов С.В.", 30),
                 new Person("Еваныч В.А.", 36),
 
-            }; ;
+            };
             
-
             company1.Departments[2].Persons = persons3;
 
             company1.GetInfoCompany();
@@ -139,9 +77,7 @@ namespace CL1
                new Person("Екат К.А.", 37),
             };
 
-
             company2.Departments[0].Persons = persons1;
-
 
             List<Person> persons22 = new List<Person>()
             {
@@ -150,7 +86,6 @@ namespace CL1
                 new Person("Солгин В.А.", 34),
 
             };
-
 
             company2.Departments[1].Persons = persons22;
 
@@ -166,7 +101,6 @@ namespace CL1
 
             company2.GetInfoCompany();
             
-
             #endregion
 
             Console.ReadLine();
